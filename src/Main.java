@@ -1,29 +1,8 @@
 import java.time.LocalDate;
 import java.util.Scanner;
 
+
 public class Main {
-    public static void main(String[] args) {
-        task1();
-        task2();
-        task3();
-    }
-
-    public static void task1() {
-        Scanner scanner = new Scanner(System.in);
-        System.out.println("Введите год");
-        int year = scanner.nextInt();
-        int leapYear = leapYear(year);
-    }
-
-    public static void task2() {
-        recommendVersion(1, 2023);
-    }
-
-    public static void task3() {
-        int deliveryDays = calculateDeliveryDays(20);
-        System.out.println(deliveryDays);
-
-    }
     public static int leapYear(int year) {
         if (year % 4 == 0 && year % 100 != 0 || year % 400 == 0) {
             System.out.println(year + " год является високосным");
@@ -39,13 +18,13 @@ public class Main {
         int android = 1;
 
         if (clientOs == iOS) {
-            if (clientOs >= clientYear) {
+            if (currentYear >= clientYear) {
                 System.out.println("Установите обычную версию для iOS");
             } else {
                 System.out.println("Установите облегченную версию для iOS");
             }
         } else if (clientOs == android) {
-            if (clientOs <= clientYear) {
+            if (currentYear >= clientYear) {
                 System.out.println("Установите обычную версию для android");
             } else {
                 System.out.println("Установите облегченную версию для android");
@@ -68,6 +47,28 @@ public class Main {
 
         }
         return deliveryDays;
+    }
+
+    public static void main(String[] args) {
+        task1();
+        task2();
+        task3();
+    }
+
+    public static void task1() {
+        Scanner scanner = new Scanner(System.in);
+        System.out.println("Введите год");
+        int year = scanner.nextInt();
+        int leapYear = leapYear(year);
+    }
+
+    public static void task2() {
+        recommendVersion(1, 2015);
+    }
+    public static void task3() {
+        int deliveryDays = calculateDeliveryDays(60);
+        System.out.println("Дней доставки: " + deliveryDays);
+
     }
 }
 
