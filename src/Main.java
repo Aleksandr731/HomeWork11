@@ -66,8 +66,8 @@ public class Main {
         recommendVersion(1, 2015);
     }
     public static void task3() {
-        int deliveryDays = calculateDeliveryDays(20);
-        System.out.println(deliveryDays);
+        int deliveryDays = calculateDeliveryDays(60);
+        System.out.println("Дней доставки: " + deliveryDays);
 
     }
 }
